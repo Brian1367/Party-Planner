@@ -1,0 +1,25 @@
+<h1>Add new friends!!</h1>
+
+<br/>
+<% @errors.each do |error_message| %>
+  <h5><%= error_message %></h5>
+<% end %>
+<form method='post'>
+  <label for='name'>First Name:</label>
+  <input
+    type='text'
+    name='first_name'
+    id='first_name'
+    value='<%= @new_first_name %>'
+    />
+
+  <label for='description'>Last Name:</label>
+  <input
+    type='text'
+    name='last_name'
+    id='last_name'
+    value='<%= @new_last_name %>'
+    />
+
+  <input type='submit' value='Submit' class='submitButton'/>
+</form>

@@ -1,0 +1,31 @@
+<h1>Create a new party!</h1>
+
+<br/>
+
+<form method='post'>
+  <label for='name'>Name:</label>
+  <input
+    type='text'
+    name='name'
+    id='name'
+    default=""
+    value='<%= @party_name %>'
+    />
+
+  <label for='location'>Location:</label>
+  <textarea
+    name='location'
+    id='location'
+    value='<%= @party_location %>'
+  ></textarea>
+
+  <label for='description'>Description:</label>
+  <input
+    type='text'
+    name='description'
+    id='description'
+    value='<%= @party_description %>'
+    />
+
+  <input type='submit' value='Submit' class='submitButton'/>
+</form>

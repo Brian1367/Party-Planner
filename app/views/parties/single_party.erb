@@ -1,0 +1,42 @@
+<h1><%= @party.name %></h1>
+
+<hr>
+
+
+<h3>Location:</h3>
+<%= @party.location %>
+
+<br/>
+<br/>
+
+<h3>Description</h3>
+<%= @party.description %>
+
+<br/>
+<br/>
+<hr>
+
+
+<h3>Invited Friends:</h3>
+
+<% @invited_friends.each do |person| %>
+  <li><%= person.first_name %> <%= person.last_name %></li>
+<% end %>
+
+<br/>
+<br/>
+<hr>
+
+<h3>Invite more friends:</h3>
+<form method='post'>
+  <select name='new_invite'>
+    <option value=""></option>
+    <% @remaining_friends.each do |friend| %>
+      <option value="<%= friend.id %>">
+        <%= friend.first_name %> <%= friend.last_name %>
+      </option>
+    <% end %>
+  </select>
+
+  <input type='submit' value='Invite' class='submitButton'/>
+</form>
